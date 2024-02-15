@@ -50,11 +50,11 @@ function placeOrder() {
         summaryHtml += `<p>${item} Ordered: ${quantities[item]} (Total: $${showMoney(quantities[item] * prices[item])})</p>`;
     }
     summaryHtml += `
-        <p>Subtotal (Before Discount): $${showMoney(originalSubtotal)}</p>
+        <p><hr>Subtotal (Before Discount): $${showMoney(originalSubtotal)}</p>
         <p>Discount: $${showMoney(discount)}</p>
         <p>Subtotal (After Discount): $${showMoney(subtotal)}</p>
         <p>Tax (6.25%): $${showMoney(tax)}</p>
-        <p>Final Total: $${showMoney(total)}</p>
+        <p style="color:red;"><b>Final Total: $${showMoney(total)}</b></p>
     `;
     
     document.getElementById('orderSummary').innerHTML = summaryHtml;
